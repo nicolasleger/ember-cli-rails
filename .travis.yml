@@ -5,9 +5,11 @@ cache:
 notifications:
   email: false
 rvm:
-  - 2.3.0
-  - 2.2.2
-  - jruby-9.0.3.0
+  - 2.5.0
+  - 2.4.3
+  - 2.3.6
+  - 2.2.9
+  - jruby-9.1.16.0
 install: bin/setup_ci
 before_script:
   - export PATH="$HOME/.nvm/versions/node/v${NODE_JS_VERSION}/bin:$PATH"
@@ -23,5 +25,5 @@ gemfile:
   - gemfiles/master.gemfile
 matrix:
   allow_failures:
-    - rvm: jruby-9.0.3.0
+    - rvm: jruby-9.1.16.0
     - gemfile: gemfiles/master.gemfile
